@@ -11,7 +11,7 @@ server.get("/", async (request, reply) => {
 });
 
 server.listen({
-  port: 3000,
+  port: Number(process.env.PORT) ?? 3000,
 }, (err) => {
   if (err) {
     server.log.error(err);
