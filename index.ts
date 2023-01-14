@@ -12,7 +12,8 @@ server.get("/", async (request, reply) => {
 
 const port = process.env.PORT ?? 3000;
 server.listen({
-  port: Number(port)
+  port: Number(port),
+  host: '0.0.0.0'
 }, (err) => {
   if (err) {
     server.log.error(err);
